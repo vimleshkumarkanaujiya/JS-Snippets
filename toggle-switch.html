@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Toggle Switching</title>
+      <style>
+         .bt {
+         width: 128px;
+         height: 128px;
+         background-size: cover;
+         cursor: pointer;
+         }
+         .bt.off{
+         background-image: url(Off.png);
+         transition: 0.9s ease;
+         }
+         .bt.on{
+         background-image: url(On.png);
+         transition: 0.9s ease;
+         }
+      </style>
+   </head>
+   <body>
+      <div id="openai" class="bt off"></div>
+      <script>
+         var a = document.querySelector("#openai");
+         
+         a.addEventListener('click', function(){
+             a.classList.toggle('on');
+             a.classList.toggle('off');
+         })
+      </script>
+   </body>
+</html>
